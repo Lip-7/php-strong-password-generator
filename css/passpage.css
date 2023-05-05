@@ -39,11 +39,11 @@ body {
 
 .box .inner span {
   position: absolute;
-  animation: marquee 5s linear infinite;
+  animation: marquee 7s linear infinite;
 }
 
 .box .inner:first-child span {
-    animation: marquee 5s linear infinite 2.5s, opacityOn 5s linear 2.5s infinite ;
+    animation: marquee 7s linear infinite 2.3s, opacityOn 7s linear 2.3s infinite ;
   left: -100%;
   opacity: 0;
 }
@@ -62,7 +62,7 @@ button:hover{
   }
 
   to {
-    left: -100%;
+    left: -200%;
   }
 }
 @keyframes opacityOn {
