@@ -18,7 +18,7 @@ $password = $_SESSION['password'];
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class=" relative">
+<body class=" w-full relative">
     <div class="box mt-7">
         <div class="inner">
             <span><?php echo $password ?></span>
@@ -27,8 +27,9 @@ $password = $_SESSION['password'];
             <span>Password</span>
         </div>
     </div>
+    <a href="./index.php" class="top-4 right-4 absolute"><button class=" bg-pink-400 px-3 py-2 rounded-full hover:bg-pink-700 transition-all hover:text-white">Return Back</button></a>
     <div id="passText" class="passText absolute cursor-pointer">
-        <h1 id="password" class=" text-9xl"><?php echo $password ?></h1>
+        <h1 id="password" class=" text-9xl text-slate-900"><?php echo $password ?></h1>
     </div>
     <script src="./js/passscript.js"></script>
 </body>
