@@ -1,9 +1,12 @@
 <?php
+session_start();
 include __DIR__ . '/partials/store/store.php';
 include __DIR__ . '/partials/functions/utility.php';
 if (!empty($_POST['passLenght'])) {
   $newPasswordLenght = $_POST['passLenght'];
   $newPassword = getPassword($chars, $newPasswordLenght);
+  $_SESSION['password'] = $newPassword;
+  header('Location: ./passpage.php');
 }
 ?>
 

@@ -8,5 +8,5 @@ function getPassword($chars, $leng)
         $rndType = $charsTypes[rand(0, (count($charsTypes) - 1))];
         $newPassword .= $chars[$rndType][rand(0, (strlen($chars['numeric']) - 1))];
     }
-    echo $newPassword;
+    return $newPassword;
 }
