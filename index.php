@@ -1,5 +1,10 @@
 <?php
-
+include __DIR__ . '/partials/store/store.php';
+include __DIR__ . '/partials/functions/utility.php';
+if (!empty($_POST['passLenght'])) {
+  $newPasswordLenght = $_POST['passLenght'];
+  $newPassword = getPassword($chars, $newPasswordLenght);
+}
 ?>
 
 
@@ -32,13 +37,13 @@
       <div class="flex -mx-2 mb-2 text-center">
         <div class="w-1/2 px-2">
           <label for="charsLower">
-            <input type="checkbox" class="align-middle" id="charsLower" checked>
+            <input type="checkbox" class="align-middle" id="charsLower" name="charsLower" checked>
             <span class="text-xs font-semibold text-gray-500">LOWERCASE</span>
           </label>
         </div>
         <div class="w-1/2 px-2">
           <label for="charsUpper">
-            <input type="checkbox" class="align-middle" id="charsUpper" checked>
+            <input type="checkbox" class="align-middle" id="charsUpper" name="charsUpper" checked>
             <span class="text-xs font-semibold text-gray-500">UPPERCASE</span>
           </label>
         </div>
@@ -46,13 +51,13 @@
       <div class="flex -mx-2 text-center">
         <div class="w-1/2 px-2">
           <label for="charsNumeric">
-            <input type="checkbox" class="align-middle" id="charsNumeric" checked>
+            <input type="checkbox" class="align-middle" id="charsNumeric" name="charsNumeric" checked>
             <span class="text-xs font-semibold text-gray-500">NUMBERS</span>
           </label>
         </div>
         <div class="w-1/2 px-2">
           <label for="charsSymbols">
-            <input type="checkbox" class="align-middle" id="charsSymbols" checked>
+            <input type="checkbox" class="align-middle" id="charsSymbols" name="charsSymbols" checked>
             <span class="text-xs font-semibold text-gray-500">SYMBOLS</span>
           </label>
         </div>

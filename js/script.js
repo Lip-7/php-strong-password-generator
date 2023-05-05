@@ -3,7 +3,6 @@ function app() {
   const range = document.getElementById("passLenghtRange");
   range.addEventListener("input", function (e) {
       field.value = e.target.value;
-      console.log(field.value);
   });
   field.addEventListener("input", function (e) {
     range.value = e.target.value;
