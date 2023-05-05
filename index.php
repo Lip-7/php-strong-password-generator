@@ -4,7 +4,15 @@ include __DIR__ . '/partials/store/store.php';
 include __DIR__ . '/partials/functions/utility.php';
 if (!empty($_POST['passLenght'])) {
   $newPasswordLenght = $_POST['passLenght'];
-  $newPassword = getPassword($chars, $newPasswordLenght);
+  /* get options */
+  $charsLower = empty($_POST['charsLower']) ? false : true;
+  $charsUpper = empty($_POST['charsUpper']) ? false : true;
+  $charsNumeric = empty($_POST['charsNumeric']) ? false : true;
+  $charsSymbols = empty($_POST['charsSymbols']) ? false : true;
+  /* /get options */
+  $newchars = getChars($chars, $charsLower, $charsUpper, $charsNumeric, $charsSymbols);
+  /* var_dump($newchars); */
+  $newPassword = getPassword($newchars, $newPasswordLenght);
   $_SESSION['password'] = $newPassword;
   header('Location: ./passpage.php');
 }
